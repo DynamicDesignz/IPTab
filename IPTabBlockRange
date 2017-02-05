@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Block Subnet ~$ "
+read subrange
+iptables -A INPUT -s $subrange -j DROP
+

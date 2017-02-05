@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Ports can be forwarded from the external address to a machine on the private network easily."
+
+
+echo "Forward Remote Address ~$ "
+read EXTIP
+echo "On Remote Port ~$ "
+read RPORT
+echo "To Dest-Local Address ~$ "
+read DEST
+echo "To Dest-Local Port ~$ "
+
+iptables -t nat -A PREROUTING -p tcp -d $DEST --dport $DPORT -j DNAT --to $EXTIP:$RPORT
+
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Drop SSH Port Connection to IP ~$ "
+read dropsship
+iptables -A INPUT -p tcp --dport ssh -s $dropsship -j DROP

@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Block IP ~$ "
+read block
+iptables -A INPUT -s $block -j DROP
